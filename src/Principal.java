@@ -1,15 +1,28 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import br.com.danielemidio.pessoa.Pessoa;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+import java.util.ArrayList;
+
+public class Principal {
+    public static void main(String[] args) {
+        ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
+        Pessoa pessoa1 = new Pessoa();
+        Pessoa pessoa2 = new Pessoa();
+        Pessoa pessoa3 = new Pessoa();
+
+        pessoa1.setNome("Daniel");
+        pessoa1.setIdade(36);
+        pessoa2.setNome("Cristiano");
+        pessoa2.setIdade(34);
+        pessoa3.setNome("Carlos");
+        pessoa3.setIdade(28);
+
+        listaDePessoas.add(pessoa1);
+        listaDePessoas.add(pessoa2);
+        listaDePessoas.add(pessoa3);
+
+        System.out.println("Tamanho da lista " + listaDePessoas.size());
+        System.out.println("Primeira Pessoa da Lista " + listaDePessoas.get(0));
+        System.out.println("Lista completa " + listaDePessoas.toString());
+
     }
 }
